@@ -5,10 +5,11 @@ namespace REST;
 class Model_Helper
 {
 	
-	static $json = null;
+	protected static $json = null;
 	
 	
-	protected static function readJson($force = false) {
+	protected static function readJson($force = false)
+	{
 		if (!static::$json || $force) {
 			$body = file_get_contents('php://input');
 			if ($json = json_decode($body)) {
@@ -30,5 +31,4 @@ class Model_Helper
 		
 		return $default;
 	}
-	
 }

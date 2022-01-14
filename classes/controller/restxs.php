@@ -4,7 +4,7 @@ namespace REST;
 
 /**
  * Simple extension of the FuelPHP REST Controller
- * 
+ *
  * Add supports for cross-site (XS) requests and CORS Preflight
  */
 class Controller_RestXS extends \Controller_Rest
@@ -14,11 +14,13 @@ class Controller_RestXS extends \Controller_Rest
 	protected static $headers = 'Content-Type';
 	protected static $origin = '*';
 	
-	protected static function headers() {
+	protected static function headers()
+	{
 		return static::$headers;
 	}
 	
-	protected static function origin() {
+	protected static function origin()
+	{
 		return static::$origin;
 	}
 	
@@ -35,7 +37,7 @@ class Controller_RestXS extends \Controller_Rest
 	
 	/**
 	 * Set basenode, and ensure response is in the same format as the input
-	 * 
+	 *
 	 * @param type $inputType
 	 * @param type $prefix
 	 */
@@ -68,7 +70,7 @@ class Controller_RestXS extends \Controller_Rest
 	
 	/**
 	 * The type of input request
-	 * 
+	 *
 	 * @return string	json, xml based on request
 	 */
 	protected function inputType()
@@ -91,5 +93,4 @@ class Controller_RestXS extends \Controller_Rest
 		// Use parent method
 		return parent::router($resource, $arguments);
 	}
-	
 }
