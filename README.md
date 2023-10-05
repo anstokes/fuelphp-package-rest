@@ -1,7 +1,7 @@
 ![ANSTECH Limited](docs/assets/img/square-logo-256px.png?raw=true "ANSTECH Limited")
 
 
-## FuelPHP - REST Module
+## FuelPHP - REST Package
 
 > A basic extension of the default FuelPHP REST Controller, with cross site (XS) and CORS preflight support.
 
